@@ -15,14 +15,15 @@ export default function MyPhotos() {
         {userDetail.postDTOS
           .filter((item) => item.category === "photogroup")
           .map((item) => (
-            <div className="img-board">
+            <div className="img-board"
+            key={item.id}>
               <img
                 className="image"
-                key={item.id}
                 src={item.url}
                 alt={item.title}
                 loading="lazy"
               />
+              <div>{item.isShared ? '공유' : '비공개'}</div>
             </div>
           ))}
       </div>

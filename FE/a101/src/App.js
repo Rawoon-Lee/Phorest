@@ -25,6 +25,9 @@ import Kakao from './components/User/Kakao'
 import user from './api/user'
 import { setCurrentUser } from './store/modules/user'
 
+// bootstrap css
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   const dispatch = useDispatch()
 
