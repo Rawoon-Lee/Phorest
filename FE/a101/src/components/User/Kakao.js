@@ -15,8 +15,6 @@ export default function Kakao() {
   let params = new URL(window.location.href).searchParams;
   let code = params.get("code");
 
-  console.log(code);
-
   //토큰 저장
   const getKakaoToken = () => {
     user.kakaoSignup(code).then((result) => {
